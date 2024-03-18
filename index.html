@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Limya</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--! Bootstrap CDN-->
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!--! Bootstrap CDN-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></script>
+
+    <!--SplideJS-->
+
+    <script src="
+https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
+"></script>
+    <link
+      href="
+https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
+"
+      rel="stylesheet"
+    />
+
+    <!--SplideJS-->
+    <script src="
+    https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js
+    "></script>
+
+    <!--JQuery-->
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
+    <!--JQuery-->
+  </head>
+
+  <body id="body">
+
+    <div id="preloader">
+      <img src="https://i.ibb.co/SRPtcVR/Limya-Logo-Transparent-Background-2.png" alt="Loading...">
+    </div>
+
+
+    <!--! header start -->
+
+    <div id="overlay">
+      <div id="close-ovly" class="overlay-close">
+        <i class="bi bi-x"></i>
+      </div>
+      <div id="pop-up">
+        <div class="overlay-menu">
+          <a href="index.html">Anasayfa</a>
+          <a href="projects.html">Projeler</a>
+          <a href="about.html">Hakkımızda</a>
+          <a id="contact-id">İletişim</a>
+        </div>
+
+        <a href="#" class="overlay-image">
+          <img
+            src="https://i.ibb.co/sVfbydX/Limya-Logo-Transparent-Background.png"
+          />
+        </a>
+        <div class="overlay-social">
+          <a href="https://www.instagram.com/limyadesign/?hl=tr"
+            ><i class="bi bi-instagram"></i
+          ></a>
+          <a
+            href="
+                https://api.whatsapp.com/send/?phone=905347495112&text&type=phone_number&app_absent=0"
+            ><i class="bi bi-whatsapp"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+
+    <header>
+        <div class="header-row">
+          <div class="container">
+            <div class="header-wrapper">
+                              <!--! MOBIL HEADER HAMBURGER-->
+
+                              <div class="header-right" id="click">
+                                <span class="ham-menu"></span>
+                              </div>
+              
+                              <!--! MOBIL HEADER HAMBURGER-->
+
+                <div class="header-logo">
+                  <a href="index.html" class="header-image">
+                    <img
+                      src="https://i.ibb.co/sVfbydX/Limya-Logo-Transparent-Background.png"
+                    />
+                  </a>
+                </div>
+
+              <div class="header-right-normal">
+                <div class="header-right-normal-links">
+                  <a href="index.html">Anasayfa</a>
+                  <a href="projects.html">Projeler</a>
+                  <a href="about.html">Hakkımızda</a>
+                  <a id="contact-id">İletişim</a>
+                </div>
+              </div>
+
+              <div class="header-left">
+                <a href="https://www.instagram.com/limyadesign/?hl=tr"
+                  ><i class="bi bi-instagram"></i
+                ></a>
+                <a
+                  href="
+                https://api.whatsapp.com/send/?phone=905347495112&text&type=phone_number&app_absent=0"
+                  ><i class="bi bi-whatsapp"></i
+                ></a>
+              </div>
+              
+
+              <script>
+                $("#click").on("click", function () {
+                  $("#overlay").slideToggle("slow");
+                });
+              </script>
+            </div>
+        </div>
+      </div>
+    </header>
+
+    <!--! header end  -->
+
+    <div class="modal-dialog"></div>
+
+    <!--! slider start  -->
+
+    <div class="splide__slide splide__slide1">
+      <div class="video-container">
+        <video autoplay muted loop>
+          <source src="/video/limya.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="container">
+
+
+      <div class="slidermain">
+        <p class="slidermain-title">LIMYA DESIGN</p>
+        <p class="slidermain-comment">
+          Şirketimizin geniş yelpazesinde yer alan çeşitli projeleri keşfetmek
+          ve detaylarıyla incelemek için oluşturduğumuz içeriklere göz
+          atabilirsin.
+        </p>
+
+        <a class="bio-more" id="biomoresliderid">Daha fazla...</a>
+      </div>
+    </div>
+    </div>
+    <!-- <li class="splide__slide splide__slide2">
+            <div class="slidermain">
+              <p class="slidermain-title">SILIVRI VILLA</p>
+              <p class="slidermain-comment">
+                Şirketimizin geniş yelpazesinde yer alan çeşitli projeleri
+                keşfetmek ve detaylarıyla incelemek için oluşturduğumuz
+                içeriklere göz atabilirsin.
+              </p>
+
+              <a class="bio-more" id="biomoresliderid2">Daha fazla...</a>
+            </div>
+            <img src="https://i.ibb.co/Q9qgzgk/output-onlinepngtools-4.png" />
+          </li>
+          <li class="splide__slide splide__slide3">
+            <div class="slidermain">
+              <p class="slidermain-title">CEY EMPRIME</p>
+              <p class="slidermain-comment">
+                Şirketimizin geniş yelpazesinde yer alan çeşitli projeleri
+                keşfetmek ve detaylarıyla incelemek için oluşturduğumuz
+                içeriklere göz atabilirsin.
+              </p>
+
+              <a class="bio-more" id="biomoresliderid3">Daha fazla...</a>
+            </div>
+            <img src="https://i.ibb.co/rF6ZT53/output-onlinepngtools-6.png" />
+          </li> -->
+    <script>
+      $("#biomoresliderid").on("click", function () {
+        $("html, body").animate(
+          {
+            scrollTop: $("#portfolioid").offset().top,
+          },
+          1500
+        );
+      });
+      $("#biomoresliderid2").on("click", function () {
+        $("html, body").animate(
+          {
+            scrollTop: $("#portfolioid").offset().top,
+          },
+          1500
+        );
+      });
+      $("#biomoresliderid3").on("click", function () {
+        $("html, body").animate(
+          {
+            scrollTop: $("#portfolioid").offset().top,
+          },
+          1500
+        );
+      });
+    </script>
+
+    <!--! slider end  -->
+
+    <!--! bio start  -->
+
+    <div class="bio" id="bio-scroll">
+      <div class="container">
+      <div class="bio-wrapper">
+
+
+
+        <div class="bio-content">
+          <p class="bio-desc">
+            Saygın Gül, çocukluğundan itibaren sanatsal tasarımlara olan
+            tutkusunu keşfetmiş bir isimdir. Babası Ali Gül’ün inşaat
+            sektöründeki deneyimleri, onu küçük yaşlardan itibaren inşaat
+            şantiyelerinde bulunmaya yönlendirmiştir.
+          </p>
+          <p class="bio-title">SAYGIN GUL</p>
+          <div class="bio-contact">
+            <p class="bio-email">limyadesign@outlook.com</p>
+            <p class="bio-phone">+90 (534) 749 51 12</p>
+          </div>
+          <a class="bio-more-a" href="about.html">
+            <p class="bio-more bio-more-2">Daha fazla...</p>
+          </a>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <!--! bio end  -->
+
+    <div class="bio-port" id="portfolioid">
+      <div class="bio-port-wrapper">
+        <div class="mouse-biome">
+          <div class="scroll-downs">
+            <div class="mousey">
+              <div class="scroller"></div>
+            </div>
+          </div>
+        </div>
+        <div class="bio-port-top">
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi qui
+            officiis, dolores eaque, est molestiae ab praesentium ullam dolorem
+            debitis placeat possimus quis error esse ad quidem! Est, pariatur
+            laboriosam.
+          </p>
+          <a class="bio-port-title">Öne Çıkarılanlar</a>
+        </div>
+
+        <a class="bio-more-3">Tüm projeler...</a>
+      </div>
+    </div>
+
+    <!--! portfolio start  -->
+
+    <div class="portfolio">
+      <div class="portfolio-wrapper">
+        <div class="portfolio-content">
+          <a class="portfolio-content-a" href="./single projects/project1.html">
+            <img
+              id="portfolio-img"
+              src="https://i.ibb.co/LhGTWwM/Y-netici-Odas-Revize-1-1.jpg"
+            />
+          </a>
+          <div class="portfolio-desc-wrapper">
+            <p class="port-cont-desc">ESAD Panel</p>
+            <p class="port-cont-desc port-cont-desc2">2018</p>
+          </div>
+        </div>
+        <div class="portfolio-content">
+          <a class="portfolio-content-a" href="./single projects/project2.html">
+            <img
+              src="https://i.ibb.co/8D2CZNH/Florya-Emlak-Konut-Salon-3-1.jpg"
+            />
+          </a>
+
+          <div class="portfolio-desc-wrapper">
+            <p class="port-cont-desc">ESAD Panel</p>
+            <p class="port-cont-desc port-cont-desc2">2018</p>
+          </div>
+        </div>
+        <div class="portfolio-content">
+          <a class="portfolio-content-a" href="./single projects/project3.html">
+            <img
+              src="https://i.ibb.co/3cyqrN8/thumbnail-0-A-7-effects-Result-1.jpg"
+            />
+          </a>
+          <div class="portfolio-desc-wrapper">
+            <p class="port-cont-desc">ESAD Panel</p>
+            <p class="port-cont-desc port-cont-desc2">2018</p>
+          </div>
+        </div>
+        <div class="portfolio-content">
+          <a class="portfolio-content-a" href="./single projects/project4.html">
+            <img src="https://i.ibb.co/9mPbXHb/Giri-Kat-Salon-3.jpg" />
+          </a>
+          <div class="portfolio-desc-wrapper">
+            <p class="port-cont-desc">ESAD Panel</p>
+            <p class="port-cont-desc port-cont-desc2">2018</p>
+          </div>
+        </div>
+        <div class="portfolio-content">
+          <a class="portfolio-content-a" href="./single projects/project5.html">
+            <img src="https://i.ibb.co/74DPqkG/ERSN2610-Enhanced-NR-1.jpg" />
+          </a>
+          <div class="portfolio-desc-wrapper">
+            <p class="port-cont-desc">ESAD Panel</p>
+            <p class="port-cont-desc port-cont-desc2">2018</p>
+          </div>
+        </div>
+        <div class="portfolio-content">
+          <a class="portfolio-content-a" href="./single projects/project1.html">
+            <img
+              id="portfolio-img"
+              src="https://i.ibb.co/LhGTWwM/Y-netici-Odas-Revize-1-1.jpg"
+            />
+          </a>
+          <div class="portfolio-desc-wrapper">
+            <p class="port-cont-desc">ESAD Panel</p>
+            <p class="port-cont-desc port-cont-desc2">2018</p>
+          </div>
+        </div>
+        <div class="portfolio-content">
+          <a class="portfolio-content-a" href="./single projects/project1.html">
+            <img
+              id="portfolio-img"
+              src="https://i.ibb.co/LhGTWwM/Y-netici-Odas-Revize-1-1.jpg"
+            />
+          </a>
+          <div class="portfolio-desc-wrapper">
+            <p class="port-cont-desc">ESAD Panel</p>
+            <p class="port-cont-desc port-cont-desc2">2018</p>
+          </div>
+        </div>
+        <div class="portfolio-content">
+          <a class="portfolio-content-a" href="./single projects/project1.html">
+            <img
+              id="portfolio-img"
+              src="https://i.ibb.co/LhGTWwM/Y-netici-Odas-Revize-1-1.jpg"
+            />
+          </a>
+          <div class="portfolio-desc-wrapper">
+            <p class="port-cont-desc">ESAD Panel</p>
+            <p class="port-cont-desc port-cont-desc2">2018</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--! portfolio end  -->
+
+    <!--! phone start  -->
+
+    <div class="phone">
+      <div class="phone-wrapper">
+        <div class="phone-left">
+          <p class="phone-title">Bize Ulaşın</p>
+          <p class="phone-number">+90 (534) 749 51 12</p>
+          <div class="phone-left-contents">
+            <div class="phone-single">
+              
+              <i class="fa-regular fa-clock"></i>
+              <h5>Çalışma saatleri:</h5>
+              <p>Pazartesi-Cuma, 09:00 - 18:00</p>
+            </div>
+            <div class="phone-single">
+              <i class="fa-regular fa-envelope"></i>
+              <h5>E-Mail:</h5>
+              <p>limyadesgin@outlook.com</p>
+            </div>
+            <div class="phone-single">
+              <i class="fa-brands fa-whatsapp"></i>
+              <h5>WhatsApp:</h5>
+              <a
+                href="https://api.whatsapp.com/send/?phone=905347495112&text&type=phone_number&app_absent=0"
+                >+90 (534) 749 51 12</a
+              >
+            </div>
+            <div class="phone-single">
+              <i class="fa-brands fa-instagram"></i>
+
+              <h5>Instagram:</h5>
+
+              <a href="https://www.instagram.com/limyadesign/?hl=tr">
+                <p>limyadesign</p>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!--! phone end  -->
+
+    <!--! jobs start  -->
+
+    <div class="jobs" id="jobs-id">
+      <div class="container">
+      <div class="jobs-wrapper" id="jobs-id-2">
+        <div id="job-content-1" class="job-content job-content-1">
+          <div class="job-logo">
+            <i class="fa-solid fa-wrench"></i>
+          </div>
+          <div class="job-title">İç Mekan Tasarımı</div>
+          <div class="job-desc">
+            Mekanınızı size veya işletmenize özel olarak tasarlıyoruz. Mekan yerleşimlerini belirliyor, kişiye özel mobilya tasarımları ve ürün tasarımlarımızla ile eşsiz bir atmosfer oluşturuyoruz.
+          </div>
+        </div>
+
+        <div class="job-content">
+          <div class="job-logo">
+            <i class="fa-solid fa-gear"></i>
+          </div>
+          <div class="job-title">Mimari Proje</div>
+          <div class="job-desc">
+            Proje alanınızın mimari planlamasını ve mekan yerleşimlerini tam ölçü ile yapıyor, alanın uygulamaya geçilmeden tam düşünülmüş ve tasarlanmış olmasını sağlıyoruz.
+          </div>
+        </div>
+        <div id="job-content-3" class="job-content job-content-3">
+          <div class="job-logo">
+            <i class="fa-solid fa-pencil"></i>
+          </div>
+          <div class="job-title">Mimari Uygulamalar</div>
+          <div class="job-desc">
+            Mekan tasarımı ve mimari projesi hazır olan mekanlarınızı en kaliteli malzemeler ve en iyi işçilik ile uyguluyoruz. Mimari uygulamalarınızda şantiye denetimi yapıyoruz.
+          </div>
+        </div>
+        <div id="job-content-4" class="job-content job-content-4">
+          <div class="job-logo">
+            <i class="fa-solid fa-screwdriver"></i>
+          </div>
+          <div class="job-title">Mobilya Tasarımı</div>
+          <div class="job-desc">
+            Özel mobilya imalatımız ile size ve mekanınıza özel, hayalinizdeki mobilyaları sizin için tasarlıyoruz. Evinize ve size özel ölçü ile mobilya tasarımı yapıyoruz.
+          </div>
+        </div>
+        <div class="job-content">
+          <div class="job-logo">
+            <i class="fa-solid fa-couch"></i>
+          </div>
+          <div class="job-title">Mobilya İmalatı</div>
+          <div class="job-desc">
+            Özel mobilya imalatımız ile tasarımı ve modeli hazır olan mobilyaları en iyi malzeme ve en iyi işçilik kalitesiyle sizin için üretiyoruz. Sizin için ölçüye göre mobilya üretiyoruz.          </div>
+        </div>
+        <div id="job-content-6" class="job-content job-content-6">
+          <div class="job-logo">
+            <i class="fa-solid fa-key"></i>
+          </div>
+          <div class="job-title">Anahtar Teslim Proje</div>
+          <div class="job-desc">
+            Projenizin tüm sorumluluğunu alarak; mekan tasarımı, mobilya tasarımı, mimari projelendirme ve mimari uygulama aşamalarını anahtar teslim olarak gerçekleştiriyoruz.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!--! jobs end  -->
+
+      <!--! comments start  -->
+
+
+      <div class="comments">
+        <div class="container">
+          <div class="comments-title">Müşteri Yorumları</div>
+          <div class="comments-wrapper">
+<div class="comments-content">
+  <div class="comments-content-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta perspiciatis molestiae saepe suscipit excepturi minima error quae omnis corporis illum ipsam deleniti, quam eos! Laudantium quibusdam aut iusto odio praesentium. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui molestias laborum libero facere quia quibusdam possimus saepe asperiores eligendi provident! Quas eveniet enim vero voluptatibus harum neque, cum id quia!</div>
+  <div class="comments-content-user">
+
+    <img src="https://i.ibb.co/XkzyYss/8e248217-2fd5-4c14-ad4d-c9a1d5d6fe1f.jpg" alt="Customer-1">
+
+    <div class="comments-user-info">
+      <div class="comment-user-info-name">Şerafettin Saraçoğlu</div>
+    <div class="comment-user-info-job">Jinekolog</div>
+    </div>
+  </div>
+</div>
+<div class="comments-content">
+  <div class="comments-content-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus saepe iure id qui amet iste accusantium tenetur eum voluptate, ullam corporis animi incidunt eos dolores labore laborum aliquid? Fugiat, quas? Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat non dolores, minus quae esse in corporis. Aspernatur necessitatibus, doloremque provident accusantium officiis laudantium ex quibusdam incidunt veritatis dolorum fugiat laborum.</div>
+  <div class="comments-content-user">
+<img src="https://i.ibb.co/bFFRj41/6c3fad5a-0bb2-43e1-b985-4ad71c3a2cb4.jpg" alt="Customer-2">
+    <div class="comments-user-info">
+      <div class="comment-user-info-name">Şerafettin Saraçoğlu</div>
+    <div class="comment-user-info-job">Jinekolog</div>
+    </div>
+  </div>
+</div>
+          </div>
+        </div>
+      </div>
+
+
+        <!--! comments end  -->
+
+    <div class="newspaper">
+      <div class="port-news">
+        <div class="bio-port-wrapper bio-port-wrapper-news">
+          <div class="bio-port-top bio-port-top-news">
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi qui
+              officiis, dolores eaque, est molestiae ab praesentium ullam
+              dolorem debitis placeat possimus quis error esse ad quidem! Est,
+              pariatur laboriosam.
+            </p>
+            <a class="bio-port-title bio-port-title-news">Basındaki Projeler</a>
+          </div>
+        </div>
+        <div class="container">
+          <div class="newspaper-wrapper">
+            <div class="newspaper-content">
+              <img
+                src="https://i.ibb.co/JzK5gvD/sayg-n-gazet-son.png"
+                alt="gazete-1"
+              />
+              <div class="newspaper-title">
+                <p>Hürriyet Haber</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--! jobs start  -->
+
+    <div class="jobs jobs2" id="1jobs-id">
+      <div class="container">
+      <div class="jobs-wrapper" id="1jobs-id-2">
+        <div id="job-content-11" class="job-content job-content-1">
+          <div class="job-logo">
+            <i class="fa-solid fa-house"></i>
+          </div>
+          <div class="job-title">Ev Dekorasyonu</div>
+          <div class="job-desc">
+            Kendinizi evinizde daha iyi hissetmeniz için; ilgi alanlarınızı, hobilerinizi ve ihtiyaçlarınızı öğreniyor ve tasarımlarımızı bu çizgide yapıyoruz. Size bir mekanı değil, bir yaşam şekli tasarlıyoruz.
+          </div>
+        </div>
+
+        <div class="job-content">
+          <div class="job-logo">
+            <i class="fa-solid fa-house-flood-water"></i>
+          </div>
+          <div class="job-title">Villa Dekorasyonu</div>
+          <div class="job-desc">
+            Yapısal kaba uygulamalardan küçük detaylara kadar bir çok aşamayı içeriyor. Usdesign İç mimarlık Ofisi olarak villa tasarımı alanında size tüm konularda destek vermeye hazırız.
+          </div>
+        </div>
+        <div id="job-content-33" class="job-content job-content-3">
+          <div class="job-logo">
+            <i class="fa-solid fa-print"></i>
+          </div>
+          <div class="job-title">Ofis Dekorasyonu</div>
+          <div class="job-desc">
+            Çalışırken size huzur veren, içinde olmaktan mutlu olacağınız ofislerin, üretkenliği arttırdığının biliyoruz. Bu nedenle ihtiyaçlara uygun, estetik ve fonksiyonel ofis tasarımları yapıyoruz.
+          </div>
+        </div>
+        <div id="job-content-44" class="job-content job-content-4">
+          <div class="job-logo">
+            <i class="fa-solid fa-shop"></i>
+          </div>
+          <div class="job-title">Mağaza Dekorasyonu</div>
+          <div class="job-desc">
+            Satılacak ürünlerinize göre veya verilecek hizmete uygun olan mimari tasarım, satış ve konfor odaklı olarak planlanır. Mekanik projesi, elektrik projesi, dış cephe projesi bu doğrultuda hazırlanır.
+          </div>
+        </div>
+        <div class="job-content">
+          <div class="job-logo">
+            <i class="fa-solid fa-hotel"></i>
+          </div>
+          <div class="job-title">Otel Dekorasyonu</div>
+          <div class="job-desc">
+            Otelin ve otel odalarının konforlu ve rahat ortamı müşterileri sakinleştirip huzur bulmalarını sağlar. Müşteriler üzerinde unutulmaz hisler bırakmak ve kaliteli vakit geçirmelerini sağlayacak tasarımlar planlıyoruz.
+          </div>
+        </div>
+        <div id="job-content-66" class="job-content job-content-6">
+          <div class="job-logo">
+            <i class="fa-solid fa-utensils"></i>
+          </div>
+          <div class="job-title">Kafe Dekorasyonu</div>
+          <div class="job-desc">
+            Doğru tasarlanmış mekanların müşterileri etkileyerek mekan içerisinde daha fazla vakit geçirmelerini sağladığının ve akılda kalıcı olmak için önemli bir unsur olduğunun bilincindeyiz. Mekanlarınızın her metrekaresine değer veriyoruz.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!--! jobs end  -->
+
+    <!--! references start  -->
+    <div class="splide-wrapper">
+      <div class="referances-wrapper-main">
+        <h3 class="referances-title">Referanslar</h3>
+        <section class="splide splide3" aria-label="Basic Structure Example">
+          <div class="splide__track splide__track3">
+            <ul class="splide__list">
+              <li class="splide__slide splide__slide3">
+                <img src="https://i.ibb.co/2KzGLYR/IMG-9945.png" alt="" />
+              </li>
+              <li class="splide__slide splide__slide3">
+                <img src="https://i.ibb.co/j6dQtg1/IMG-9946.png" alt="" />
+              </li>
+              <li class="splide__slide splide__slide3">
+                <img src="https://i.ibb.co/g6y9jyh/IMG-9947.png" alt="" />
+              </li>
+              <li class="splide__slide splide__slide3">
+                <img src="https://i.ibb.co/FmPpY45/IMG-9948.png" alt="" />
+              </li>
+              <li class="splide__slide splide__slide3">
+                <img src="https://i.ibb.co/vzRdvZ6/IMG-9949.png" alt="" />
+              </li>
+              <li class="splide__slide splide__slide3">
+                <img src="https://i.ibb.co/XxHsyJp/IMG-9953.png" alt="" />
+              </li>
+              <li class="splide__slide splide__slide3">
+                <img src="https://i.ibb.co/vmYyfB9/IMG-9954.png" alt="" />
+              </li>
+              <li class="splide__slide splide__slide3">
+                <img src="https://i.ibb.co/jMN7F46/IMG-9955.png" alt="" />
+              </li>
+              <li class="splide__slide splide__slide3">
+                <img src="https://i.ibb.co/Br3rT5x/IMG-9956.jpg" alt="" />
+              </li>
+              <li class="splide__slide splide__slide3">
+                <img src="https://i.ibb.co/BBmXWhy/IMG-9958.png" alt="" />
+              </li>
+              <li class="splide__slide splide__slide3">
+                <img src="https://i.ibb.co/Smgxp5D/IMG-9957.png" alt="" />
+              </li>
+  
+  
+            </ul>
+        </section>
+      </div>
+      
+    </div>
+
+    <!--! references end  -->
+
+    <!--! footer start  -->
+
+    <footer class="footer" id="footerid">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-media">
+            <a href="index.html" class="footer-bottom-mid">
+              <img
+                src="https://i.ibb.co/sVfbydX/Limya-Logo-Transparent-Background.png"
+              />
+            </a>
+            <div class="footer-left">
+              <p class="footer-title">Linkler</p>
+              <div class="footer-left-p">
+                <a href="index.html">Anasayfa</a>
+                <a href="about.html">Hakkımızda</a>
+                <a id="button-s">Saygın Gül</a>
+
+                <script>
+                  $("#button-s").on("click", function () {
+                    $("html, body").animate(
+                      {
+                        scrollTop: $(".bio").offset().top,
+                      },
+                      1500
+                    );
+                  });
+                </script>
+
+                <a href="projects.html">Projeler</a>
+              </div>
+            </div>
+          </div>
+          <div class="footer-mid">
+            <p class="footer-title">İletişim</p>
+
+            <p>İstoç 3.Ada 46 Numara 2419.Sokak,İstanbul</p>
+            <p>+90 (534) 749 51 12</p>
+            <p>limyadesign@outlook.com</p>
+          </div>
+        </div>
+        <div class="footer-line"></div>
+        <div class="footer-bottom">
+          <div class="footer-bottom-left">
+            <p>Copyright 2024 © Limya. Tüm hakları saklıdır.</p>
+          </div>
+
+          <div class="footer-bottom-right">
+            <a href="https://www.instagram.com/limyadesign/?hl=tr"
+              ><i class="bi bi-instagram"></i
+            ></a>
+            <a
+              href="
+                https://api.whatsapp.com/send/?phone=905347495112&text&type=phone_number&app_absent=0"
+              ><i class="bi bi-whatsapp"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!--! footer end  -->
+
+    <script src="anime.js"></script>
+    <script src="slider.js"></script>
+    <script src="preloader.js"></script>
+    <script>
+      $("#close-ovly").on("click", function () {
+        $("#overlay").slideToggle();
+      });
+    </script>
+    <script>
+      $("#contact-id").on("click", function () {
+        $("html, body").animate(
+          {
+            scrollTop: $("#footerid").offset().top,
+          },
+          2000
+        );
+
+        $("#overlay").slideToggle();
+      });
+    </script>
+  </body>
+</html>
