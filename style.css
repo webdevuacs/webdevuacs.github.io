@@ -1168,10 +1168,6 @@ header {
     flex-direction: column;
   }
 
-  .portfolio-content:hover{
-    transform: scale(1.01);
-  }
-
   .portfolio-content-a{
     display: flex;
     align-items: center;
