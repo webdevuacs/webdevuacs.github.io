@@ -3,21 +3,21 @@ document.addEventListener("DOMContentLoaded", function () {
     targets: ".slidermain-title",
     translateX: 1250,
     easing: "spring(1, 80, 40, 10)",
-    delay: 200,
+    delay: 4200,
   });
 
   anime({
     targets: ".slidermain-comment",
     translateX: 1250,
     easing: "spring(1, 80, 40, 10)",
-    delay: 400,
+    delay: 4400,
   });
 
   anime({
     targets: "#biomoresliderid",
     translateX: 1250,
     easing: "spring(1, 80, 40, 10)",
-    delay: 600,
+    delay: 4600,
   });
 
   // Fonksiyon tanımlama
@@ -75,4 +75,4 @@ document.addEventListener("DOMContentLoaded", function () {
   // İlgili elementi gözlemleyiciye ekle
   var targetElement = document.getElementById("bio-scroll");
   observer.observe(targetElement);
-})
+});

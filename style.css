@@ -388,6 +388,7 @@ header {
 
 .bio-title{
     font-size: 80px;
+    width: 100%;
 }
 
 .bio-more{
@@ -470,7 +471,7 @@ header {
   font-size: 70px;
   font-weight: 500;
   color: white;
-  
+  width: 100%;
 }
 
 .bio-port-wrapper{
@@ -888,6 +889,10 @@ header {
   font-size: 50px !important  ;
 }
 
+.bio-content{
+  max-width: none !important;
+}
+
 .newspaper{
   padding-bottom: 80px;
   padding-top: 0px !important;
@@ -1085,6 +1090,15 @@ header {
     flex-direction: column;
     gap: 10px;
   }
+  
+  .bio .bio-contact{
+    width: 50%;
+  }
+
+  .bio .bio-title{
+    width: 50%;
+  }
+
 
   .bio-desc{
     max-width: 200px;
@@ -1370,70 +1384,18 @@ header {
 }
 
 
-@media only screen and (max-width: 350px){
 
 
-  .footer-media{
-    justify-content: center;
-  }
 
-  .footer-mid{
-    margin-left: 20px;
-  }
-
-  .slidermain{
-    max-width: 200px !important;
-  }
-
-
-  .bio-content{
-    max-width: 200px !important;
-  }
-
-}
-
-@media only screen and (max-width: 320px){
-
-  .slidermain{
-    margin-left: -1250px;
-  }
-
-  .slidermain-title, .bio-title{
-    font-size: 50px;
-  }
-
-  .slidermain-comment, .bio-desc{
-    font-size: 13px;
-  }
-
-  .bio-port{
-    margin-bottom: 80px;
-  }
-
-  .bio-port-top{
-    align-items: center;
-    display: flex;
-    text-align: center;  
-  }
-  .header-image img{
-    margin-left: 30px;
-  }
-
-  #pop-up{
-    margin-top: 80px;
-
-  }
-
-  .overlay{
-    z-index: 1000;
-  }
-  
-
-}
 
 .bio-title-about{
   padding-bottom: 30px;
   padding-top: 20px;
+}
+
+.bio-title-about-2{
+  justify-content: center;
+  display: flex;
 }
 
 .bio-contact-about{
@@ -1750,7 +1712,7 @@ align-items: center;
   display: flex;
 }
 
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
+@media only screen and (min-width: 769px) and (max-width: 1025px) {
 
   .header-row .container{
     display: flex !important;
@@ -1763,13 +1725,8 @@ align-items: center;
   .slidermain{
     margin-left: -200px;
   }
-
   .bio-content{
     margin-left: -3600px !important;
-  }
-  
-  .header-row-pjcts {
-    margin-left: 20px;
   }
 
   .newspaper{
@@ -1807,6 +1764,7 @@ align-items: center;
   .bio-port-wrapper{
     margin-left: 0;
   }
+  
 
   .bio-port-title{
     font-size: 54px;
@@ -1894,11 +1852,6 @@ align-items: center;
   .bio-port-top2{
     margin-left: -900px !important;
   }
-
-  .bio-port-title2{
-    margin-left: -500px;
-  }
-
   .header-wrapper{
     gap: 50px !important;
   }
@@ -2042,7 +1995,7 @@ left: -1000px ;
 .comments{
   width: 100%;
   height: 500px;
-  background-color:rgba(135, 8, 232, 0.54);
+  background-color: rgba(0, 0, 0, 0.959);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2102,6 +2055,15 @@ color: #fff;
   justify-content: center;
 }
 
+.bio-wrapper-about .bio-content{
+  max-width: 800px !important;
+}
+
+.bio-project-about{
+  justify-self: center;
+  align-items: center;
+}
+
 @media only screen and (max-width: 1100px){
 
   .bio-wrapper-about{
@@ -2122,11 +2084,13 @@ color: #fff;
 
 @media only screen and (max-width: 350px){
 
-  .bio-about .bio-content{
-    width: auto;
 
+  .bio-phone{
+    width: 150px !important;
   }
 }
+
+
   
 
 .comments img{
@@ -2148,6 +2112,7 @@ color: #fff;
 
 .comment-user-info-name{
   font-weight: 600;
+
 }
 
 .comment-user-info-job{
@@ -2166,6 +2131,10 @@ color: #fff;
 @media (max-width: 1440px) {
   .container {
     max-width: 992px !important;
+  }
+  
+  .footer-left{
+    margin-left: 0% !important;
   }
 }
 
@@ -2214,7 +2183,7 @@ color: #fff;
 
 @media (max-width: 470px) {
   .container {
-    max-width: 350px !important;
+    max-width: 320px !important;
   }
 
   .bio-content{
@@ -2226,6 +2195,42 @@ color: #fff;
     background-position: -200px 0;
   }
 }
+@media only screen and (max-width: 350px){
+
+
+  .footer-media{
+    justify-content: center;
+  }
+
+  .footer-mid{
+    margin-left: 20px;
+  }
+
+  .slidermain{
+    max-width: 200px !important;
+  }
+
+
+  .bio-content{
+    max-width: 200px !important;
+  }
+
+  .container {
+    max-width: 270px !important;
+  }
+
+
+  .jobs{
+    padding-bottom: 940px;
+  }
+
+  .jobs2{
+    padding-bottom: 1000px;
+  }
+}
+
+
+
 
 
 
@@ -2242,6 +2247,7 @@ color: #fff;
 
   .slidermain{
     max-width: 250px;
+    margin-left: -1250px;
   }
 
   .footer-top{
@@ -2262,6 +2268,14 @@ color: #fff;
     display: flex;
     flex-direction: row;
     margin-bottom: -20px;
+  }
+
+  .jobs{
+    padding-bottom: 840px;
+  }
+
+  .jobs2{
+    padding-bottom: 1000px;
   }
 }
 

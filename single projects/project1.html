@@ -56,13 +56,12 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
       </div>
       <div id="pop-up">
         <div class="overlay-menu">
-          <a href="index.html">Anasayfa</a>
-          <a href="projects.html">Projeler</a>
-          <a href="about.html">Hakkımızda</a>
-          <a id="contact-id">İletişim</a>
+          <a href="/index.html">Anasayfa</a>
+          <a href="/projects.html">Projeler</a>
+          <a href="/about.html">Hakkımızda</a>
         </div>
 
-        <a href="#" class="overlay-image">
+        <a href="/index.html" class="overlay-image">
           <img
             src="https://i.ibb.co/sVfbydX/Limya-Logo-Transparent-Background.png"
           />
@@ -93,7 +92,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
             <!--! MOBIL HEADER HAMBURGER-->
 
             <div class="header-logo">
-              <a href="index.html" class="header-image">
+              <a href="/index.html" class="header-image">
                 <img
                   src="https://i.ibb.co/sVfbydX/Limya-Logo-Transparent-Background.png"
                 />
@@ -102,10 +101,9 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
 
             <div class="header-right-normal">
               <div class="header-right-normal-links">
-                <a href="index.html">Anasayfa</a>
-                <a href="projects.html">Projeler</a>
-                <a href="about.html">Hakkımızda</a>
-                <a id="contact-id">İletişim</a>
+                <a href="/index.html">Anasayfa</a>
+                <a href="/projects.html">Projeler</a>
+                <a href="/about.html">Hakkımızda</a>
               </div>
             </div>
 
@@ -231,7 +229,6 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
               <div class="footer-left-p">
                 <a href="/index.html">Anasayfa</a>
                 <a href="/about.html">Hakkımızda</a>
-                <a id="button-s">Saygın Gül</a>
 
                 <script>
                   $("#button-s").on("click", function () {
@@ -244,7 +241,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                   });
                 </script>
 
-                <a href="projects.html">Projeler</a>
+                <a href="/projects.html">Projeler</a>
               </div>
             </div>
           </div>
@@ -279,5 +276,10 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
     <!--! portfolio end  -->
 
     <script src="/slider-single.js"></script>
+    <script>
+      $("#close-ovly").on("click", function () {
+        $("#overlay").slideToggle();
+      });
+    </script>
   </body>
 </html>
