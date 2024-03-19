@@ -366,17 +366,20 @@ header {
     background-repeat: no-repeat ;
 }
 
-.bio-wrapper{
+  wrapper{
     width: 40%;
 
 }
 
 .bio-content{
     color: rgba(255, 255, 255, 0.824);
-    margin-left: -3500px !important;
+    margin-left: -3200px !important;
     max-width: 500px !important ;
 
 }
+
+
+
 
 .bio-desc{
     font-size: 15px;
@@ -909,11 +912,6 @@ header {
   width: 70px !important;
 }
 
-  .bio-about{
-    height: 160vh !important;
-
-  }
-
   .header-wrapper{
     margin-top: 8px;
   }
@@ -1231,12 +1229,6 @@ header {
     font-size: 13px;
   }
 
-  .bio-wrapper-about{
-    margin-left: 20px !important;
-    width: 90% !important;
-    margin-left: 30px !important;
-  }
-
   .bio-project-about{
     display: none !important;
   }
@@ -1330,7 +1322,15 @@ header {
   }
 
   .referances-title{
-    font-size: 40px !important;
+    font-size: 50px !important;
+
+  }
+
+  .referances-wrapper-main{
+    gap: 0px !important;
+  }
+  .splide-wrapper{
+    padding-bottom: 0px !important;
   }
   
 }
@@ -1377,6 +1377,10 @@ header {
     justify-content: center;
   }
 
+  .footer-mid{
+    margin-left: 20px;
+  }
+
   .slidermain{
     max-width: 200px !important;
   }
@@ -1415,15 +1419,6 @@ header {
     margin-left: 30px;
   }
 
-  .bio-about{
-    height: 230vh !important;
-  }
-  
-  .bio-about .bio-content{
-    min-width: 100px !important;
-    margin-left: -10px !important;
-  }
-
   #pop-up{
     margin-top: 80px;
 
@@ -1436,20 +1431,13 @@ header {
 
 }
 
-.bio-wrapper-about{
-  margin-left: 600px;
-  margin-top: -100px;
-}
-
 .bio-title-about{
   padding-bottom: 30px;
   padding-top: 20px;
 }
 
 .bio-contact-about{
-  position: absolute;
-  right: 50px;
-  bottom: 40px;
+margin-top: 50px;
 }
 
 
@@ -1482,18 +1470,6 @@ header {
 
 .bio-desc-about{
   font-size: 16px;
-}
-
-.bio-wrapper-about .bio-content{
-  margin-left: 0px;
-  margin-top: 100px;
-}
-
-
-.bio-about{
-  position: relative;
-
-  height: 120vh;
 }
 
 .bio-about-title{
@@ -1775,7 +1751,6 @@ align-items: center;
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
-  /* iPad için CSS buraya */
 
   .header-row .container{
     display: flex !important;
@@ -1855,7 +1830,7 @@ align-items: center;
   }
   .jobs{
     margin-top:  100px;
-    padding-bottom: 100px;
+    margin-bottom: 100px;
   }
 
 
@@ -1928,15 +1903,6 @@ align-items: center;
     gap: 50px !important;
   }
 
-  .bio-about{
-    height: 120vh;
-  }
-
-  .bio-about .bio-content{
-    margin-left: -500px;
-    max-width: 600px;
-  }
-
 .bio-contact-about{
     right: unset !important;
   }
@@ -1944,7 +1910,7 @@ align-items: center;
 
 @media only screen and (min-width: 1024px) and (max-width: 1450px) {
 .bio-content{
-  margin-left: 1600px;
+margin-left: -3400px!important;
 }
 
 .phone-wrapper{
@@ -1957,30 +1923,15 @@ left: -1000px ;
 }
 
 
-.bio-about{
-  height: 150vh;
-}
 
 .bio-contact-about{
   right: unset !important;
-}
-
-.bio-wrapper-about{
-  width: 60% ;
-  margin-left: 400px;
-}
-
-.bio-about{
-  background-position: -300px 0;
 }
 
 }
 
 
 @media only screen and (min-width: 1450px) and (max-width: 1920px) {
-  .bio-wrapper-about{
-    margin-left: 600px !important;
-  }
   
   .phone-wrapper{
     width: 100%;
@@ -1990,22 +1941,13 @@ left: -1000px ;
   .slidermain{
   left: -1000px ;
   }
-
-  .bio-about .bio-content{
-    max-width: 800px;
+  
   }
 
-  
-  
-  .bio-about{
-    height: 120vh;
-  }
-  
-  .bio-wrapper-about{
-    width: 60% ;
-    margin-left: 400px;
-  }
-  
+  @media only screen and (min-width: 680px) and (max-width: 768px) {
+    .bio-content{
+      margin-left: -3500px !important;
+    }
   }
 
   @media only screen and (min-width: 574px) and (max-width: 680px) {
@@ -2085,7 +2027,7 @@ left: -1000px ;
   font-size: 70px;
   color: rgba(255, 255, 255, 0.892);
   font-weight: 500;
-
+  
 }
 
 .referances-wrapper-main{
@@ -2123,6 +2065,69 @@ left: -1000px ;
   grid-template-columns: 1fr 1fr;
   gap: 100px;
 }
+
+.bio-about .bio-content{
+  margin-left: 0px !important;
+  padding: 70px 0;
+}
+
+.bio-about{
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-image: none;
+}
+
+.bio-about-background{
+  height: 400px;
+  background-image: url("https://i.ibb.co/zQGrbXW/Web-Sayg-n-Photo-2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: center;
+position: relative;
+justify-content: center;
+align-items: center;
+display: flex;
+color: #fff;
+}
+
+.saygingul{
+  font-size: 25px;
+}
+
+.bio-wrapper-about{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 1100px){
+
+  .bio-wrapper-about{
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .bio-wrapper-about{
+    width: 100%;
+  }
+
+
+  .bio-about .bio-content{
+    width: auto;
+  }
+}
+
+@media only screen and (max-width: 350px){
+
+  .bio-about .bio-content{
+    width: auto;
+
+  }
+}
+  
 
 .comments img{
   border-radius: 100px;
@@ -2171,6 +2176,12 @@ left: -1000px ;
   }
 }
 
+@media (max-width: 1070px) {
+  .container {
+    max-width: 992px !important;
+  }
+}
+
 @media (max-width: 992px) {
   .container {
     max-width: 768px !important;
@@ -2180,6 +2191,14 @@ left: -1000px ;
 @media (max-width: 768px) {
   .container {
     max-width: 576px !important;
+  }
+
+
+
+  .bio-about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -2200,13 +2219,15 @@ left: -1000px ;
 
   .bio-content{
     margin-left: -3770px !important;
-    max-width: 250px !important;
+    width: 300px !important;
   }
 
   .bio{
     background-position: -200px 0;
   }
 }
+
+
 
 
 @media (max-width: 321px) {
@@ -2216,6 +2237,7 @@ left: -1000px ;
 
   .bio-content{
     margin-left: -3770px !important;
+    max-width: 200px !important;
   }
 
   .slidermain{
@@ -2240,6 +2262,18 @@ left: -1000px ;
     display: flex;
     flex-direction: row;
     margin-bottom: -20px;
+  }
+}
+
+@media (max-width: 260px) {
+  .bio-content{
+    max-width: 100px !important;
+  }
+}
+
+@media (min-width: 1026px)  and (max-width: 768px) {
+  .jobs2{
+    padding-bottom: 300px !important;
   }
 }
 
