@@ -53,87 +53,71 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
     <div id="overlay">
       <div id="close-ovly" class="overlay-close">
         <i class="bi bi-x"></i>
-        <script>
-          $("#close-ovly").on("click", function () {
-            $("#overlay").slideToggle();
-            // document.getElementById("body").style.overflow = "auto";
-          });
-        </script>
       </div>
       <div id="pop-up">
         <div class="overlay-menu">
           <a href="/index.html">Anasayfa</a>
-          <a>Hizmetler</a>
           <a href="/projects.html">Projeler</a>
           <a href="/about.html">Hakkımızda</a>
-          <a id="contact-id">İletişim</a>
-
-          <script>
-            $("#contact-id").on("click", function () {
-              function scrollToBottom() {
-                const scrollHeight = document.documentElement.scrollHeight;
-                const windowHeight = window.innerHeight;
-                const speed = 20;
-                let scrollInterval;
-
-                const scrollStep = Math.ceil(
-                  scrollHeight / (scrollHeight / speed)
-                );
-
-                function animateScroll() {
-                  window.scrollBy(0, scrollStep);
-
-                  const reachedBottom =
-                    window.innerHeight + window.pageYOffset >=
-                    document.body.offsetHeight;
-
-                  if (!reachedBottom) {
-                    scrollInterval = setTimeout(animateScroll, 0);
-                  }
-                }
-
-                setTimeout(() => {
-                  clearTimeout(scrollInterval);
-                }, 1000);
-
-                animateScroll();
-              }
-
-              scrollToBottom();
-
-              $("#overlay").slideToggle();
-            });
-          </script>
         </div>
 
-        <a href="#" class="overlay-image">
+        <a href="/index.html" class="overlay-image">
           <img
             src="https://i.ibb.co/sVfbydX/Limya-Logo-Transparent-Background.png"
           />
         </a>
         <div class="overlay-social">
-          <i class="bi bi-instagram"></i>
-          <i class="bi bi-whatsapp"></i>
+          <a href="https://www.instagram.com/limyadesign/?hl=tr"
+            ><i class="bi bi-instagram"></i
+          ></a>
+          <a
+            href="
+                https://api.whatsapp.com/send/?phone=905347495112&text&type=phone_number&app_absent=0"
+            ><i class="bi bi-whatsapp"></i
+          ></a>
         </div>
       </div>
     </div>
 
     <header>
-      <div class="header-row">
+      <div class="header-row header-row-single">
         <div class="container">
           <div class="header-wrapper">
-            <div class="header-left">
-              <i class="bi bi-instagram"></i>
-              <i class="bi bi-whatsapp"></i>
-            </div>
-            <a href="/index.html" class="header-image">
-              <img
-                src="https://i.ibb.co/sVfbydX/Limya-Logo-Transparent-Background.png"
-              />
-            </a>
+            <!--! MOBIL HEADER HAMBURGER-->
+
             <div class="header-right" id="click">
               <span class="ham-menu"></span>
             </div>
+
+            <!--! MOBIL HEADER HAMBURGER-->
+
+            <div class="header-logo">
+              <a href="/index.html" class="header-image">
+                <img
+                  src="https://i.ibb.co/sVfbydX/Limya-Logo-Transparent-Background.png"
+                />
+              </a>
+            </div>
+
+            <div class="header-right-normal">
+              <div class="header-right-normal-links">
+                <a href="/index.html">Anasayfa</a>
+                <a href="/projects.html">Projeler</a>
+                <a href="/about.html">Hakkımızda</a>
+              </div>
+            </div>
+
+            <div class="header-left">
+              <a href="https://www.instagram.com/limyadesign/?hl=tr"
+                ><i class="bi bi-instagram"></i
+              ></a>
+              <a
+                href="
+                https://api.whatsapp.com/send/?phone=905347495112&text&type=phone_number&app_absent=0"
+                ><i class="bi bi-whatsapp"></i
+              ></a>
+            </div>
+
             <script>
               $("#click").on("click", function () {
                 $("#overlay").slideToggle("slow");
@@ -147,189 +131,77 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
     <!--! header end  -->
 
     <div class="single">
-      <div class="container">
-        <div class="single-wrapper">
-          <div class="single-left">
-            <div class="single-left-main">
-              <img
-              id="myImage"
-                src="https://i.ibb.co/JCCYrxM/Florya-Emlak-Konut-Salon-2-1.jpg"
-              />
-            </div>
-            <div class="fullscreen-overlay" id="overlay-fs"></div>
-            <script>
-              var originalImage = document.getElementById("myImage");
-              var overlay = document.getElementById("overlay-fs");
-              var fullscreenImage;
-
-              $(document).ready(function () {
-                $("#myImage").click(function () {
-                  $(".prev, .next").css("display", "block");
-                });
-              });
-
-              $(document).ready(function () {
-                $("#overlay-fs").click(function () {
-                  $(".prev, .next").css("display", "none");
-                });
-              });
-
-              originalImage.addEventListener("click", function () {
-                if (!fullscreenImage) {
-                  createFullscreenImage();
-                  enterFullscreen();
-                } else {
-                  exitFullscreen();
-                }
-              });
-
-              function createFullscreenImage() {
-                fullscreenImage = originalImage.cloneNode();
-                fullscreenImage.classList.add("fullscreen-img");
-                document.body.appendChild(fullscreenImage);
-                overlay.style.display = "block";
-              }
-
-              function enterFullscreen() {
-                document.body.classList.add("fullscreen");
-                document.body.style.overflowY = "hidden";
-              }
-
-              function exitFullscreen() {
-                if (fullscreenImage) {
-                  fullscreenImage.parentNode.removeChild(fullscreenImage);
-                  fullscreenImage = null;
-                  overlay.style.display = "none";
-                  document.body.classList.remove("fullscreen");
-                  document.body.style.overflowY = "";
-                }
-              }
-
-              overlay.addEventListener("click", function () {
-                exitFullscreen();
-              });
-            </script>
-            <script>
-              document
-                .getElementById("single-left-main-img")
-                .addEventListener("click", function () {
-                  var img = this;
-                  if (!img.classList.contains("fullscreen-img")) {
-                    img.classList.add("fullscreen-img");
-                  } else {
-                    img.classList.remove("fullscreen-img");
-                  }
-                });
-            </script>
-
-            <!-- Add navigation arrows -->
-            <button class="prev" onclick="changeImage(-1)">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 40 40"
-                width="20"
-                height="20"
-                focusable="false"
-              >
-                <path
-                  d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z"
-                ></path>
-              </svg>
-            </button>
-            <button class="next" onclick="changeImage(1)">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 40 40"
-                width="20"
-                height="20"
-                focusable="false"
-              >
-                <path
-                  d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z"
-                ></path>
-              </svg>
-            </button>
-            <div class="single-left-min">
-              <section class="splide">
-                <div class="splide__track">
-                  <ul class="splide__list">
-                    <li class="splide__slide splide__slide__single">
-                      <img
-                        src="https://i.ibb.co/JCCYrxM/Florya-Emlak-Konut-Salon-2-1.jpg"
-                      />
-                    </li>
-                    </li>
-                    <li class="splide__slide splide__slide__single">
-                      <img
-                        src="https://i.ibb.co/NygSJjK/Florya-Emlak-Konut-Salon-7-1.jpg"
-                      />
-                    </li>
-                    <li class="splide__slide splide__slide__single">
-                      <img
-                        src="https://i.ibb.co/WGkXdD2/Florya-Emlak-Konut-Salon-9-1.jpg"
-                      />
-                    </li>
-                    <li class="splide__slide splide__slide__single">
-                        <img
-                          src="https://i.ibb.co/wYr5Cb7/Florya-Emlak-Konut-Ya-z-Odas-Revize-5-1.jpg"
-                        />
-                      </li>
-                      <li class="splide__slide splide__slide__single">
-                        <img
-                          src="https://i.ibb.co/thpLwFz/Florya-Emlak-Konut-Ya-z-Odas-2-2.jpg"
-                        />
-                      </li>
-                      <li class="splide__slide splide__slide__single">
-                        <img
-                          src="https://i.ibb.co/NTcjq6x/Florya-Emlak-Konut-Yatak-Odas-1-1.jpg"
-                        />
-                      </li>
-                      <li class="splide__slide splide__slide__single">
-                        <img
-                          src="https://i.ibb.co/ZcwSLMw/Florya-Emlak-Konut-Yatak-Odas-7-1.jpg"
-                        />
-                      </li>
-                  </ul>
-                </div>
-                <script>
-                  var currentIndex = 0;
-                  var images = [];
-
-                  // Loop through each list item
-                  $(".splide__list li").each(function () {
-                    var src = $(this).find("img").attr("src");
-                    images.push(src);
-                  });
-
-                  function changeImage(step) {
-                    currentIndex += step;
-                    if (currentIndex < 0) {
-                      currentIndex = images.length - 1;
-                    } else if (currentIndex >= images.length) {
-                      currentIndex = 0;
-                    }
-                    fullscreenImage.src = images[currentIndex];
-                  }
-                </script>
-              </section>
+      <div class="single-wrapper">
+        <section class="splide splide-single">
+          <div class="mouse-biome mouse-biome-single">
+            <div class="scroll-downs">
+              <div class="mousey">
+                <div class="scroller"></div>
+              </div>
             </div>
           </div>
-          <div class="single-right">
-            <div class="single-right-title">Florya Emlak Konut Projeleri</div>
-            <div class="single-project-details-wrapper">
-              <div class="single-project-details">
-                <div class="project-name">Proje İsmi :</div>
-                <div class="project-name-1">Florya Emlak Konut</div>
-              </div>
-              <div class="single-project-details">
-                <div class="project-name">Yıl :</div>
-                <div class="project-name-1">2000</div>
-              </div>
-              <div class="single-project-details">
-                <div class="project-name">Mimar :</div>
-                <div class="project-name-1">Saygın Gül</div>
-              </div>
-            </div>
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide splide__slide2">
+                <img
+                  src="https://i.ibb.co/JCCYrxM/Florya-Emlak-Konut-Salon-2-1.jpg"
+                />
+              </li>
+              </li>
+              <li class="splide__slide splide__slide2">
+                <img
+                  src="https://i.ibb.co/NygSJjK/Florya-Emlak-Konut-Salon-7-1.jpg"
+                />
+              </li>
+              <li class="splide__slide splide__slide2">
+                <img
+                  src="https://i.ibb.co/WGkXdD2/Florya-Emlak-Konut-Salon-9-1.jpg"
+                />
+              </li>
+              <li class="splide__slide splide__slide2">
+                  <img
+                    src="https://i.ibb.co/wYr5Cb7/Florya-Emlak-Konut-Ya-z-Odas-Revize-5-1.jpg"
+                  />
+                </li>
+                <li class="splide__slide splide__slide2">
+                  <img
+                    src="https://i.ibb.co/thpLwFz/Florya-Emlak-Konut-Ya-z-Odas-2-2.jpg"
+                  />
+                </li>
+                <li class="splide__slide splide__slide2">
+                  <img
+                    src="https://i.ibb.co/NTcjq6x/Florya-Emlak-Konut-Yatak-Odas-1-1.jpg"
+                  />
+                </li>
+                <li class="splide__slide splide__slide2">
+                  <img
+                    src="https://i.ibb.co/ZcwSLMw/Florya-Emlak-Konut-Yatak-Odas-7-1.jpg"
+                  />
+                </li>
+            </ul>
+          </div>
+          <script>
+            $(".mousey").on("click", function () {
+              $("html, body").animate(
+                {
+                  scrollTop: $(".splide__slide2").offset().top,
+                },
+                1500
+              );
+            });
+          </script>
+        </section>
+      </div>
+      <div class="single-bottom">
+        <div class="single-bottom-title">Florya Emlak Konut</div>
+        <div class="single-project-details-wrapper">
+          <div class="single-project-details">
+            <div class="project-name">Proje İsmi :</div>
+            <div class="project-name-1">Florya Emlak Konut</div>
+          </div>
+          <div class="single-project-details">
+            <div class="project-name">Yıl :</div>
+            <div class="project-name-1">2000</div>
           </div>
         </div>
       </div>
@@ -337,11 +209,11 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
 
     <!--! portfolio start  -->
 
-    <footer class="footer">
+    <footer class="footer" id="footerid">
       <div class="container">
         <div class="footer-top">
           <div class="footer-media">
-            <a href="#" class="footer-bottom-mid">
+            <a href="index.html" class="footer-bottom-mid">
               <img
                 src="https://i.ibb.co/sVfbydX/Limya-Logo-Transparent-Background.png"
               />
@@ -351,11 +223,19 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
               <div class="footer-left-p">
                 <a href="/index.html">Anasayfa</a>
                 <a href="/about.html">Hakkımızda</a>
-                <a href="/projects.html">Projeler</a>
 
-                <a href="/index.html">Galeri</a>
-                <a href="/index.html">Merhaba</a>
-                <a href="/index.html">Blog</a>
+                <script>
+                  $("#button-s").on("click", function () {
+                    $("html, body").animate(
+                      {
+                        scrollTop: $(".bio").offset().top,
+                      },
+                      1500
+                    );
+                  });
+                </script>
+
+                <a href="/projects.html">Projeler</a>
               </div>
             </div>
           </div>
@@ -363,8 +243,8 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
             <p class="footer-title">İletişim</p>
 
             <p>İstoç 3.Ada 46 Numara 2419.Sokak,İstanbul</p>
-            <p>0(534) 749 51 12</p>
-            <p>saygin@email.com</p>
+            <p>+90 (534) 749 51 12</p>
+            <p>limyadesign@outlook.com</p>
           </div>
         </div>
         <div class="footer-line"></div>
@@ -374,8 +254,14 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
           </div>
 
           <div class="footer-bottom-right">
-            <i class="bi bi-instagram"></i>
-            <i class="bi bi-whatsapp"></i>
+            <a href="https://www.instagram.com/limyadesign/?hl=tr"
+              ><i class="bi bi-instagram"></i
+            ></a>
+            <a
+              href="
+                https://api.whatsapp.com/send/?phone=905347495112&text&type=phone_number&app_absent=0"
+              ><i class="bi bi-whatsapp"></i
+            ></a>
           </div>
         </div>
       </div>
@@ -383,13 +269,10 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
 
     <!--! portfolio end  -->
 
-    <script src="slider-single.js"></script>
+    <script src="/slider-single.js"></script>
     <script>
-      $(document).ready(function () {
-        $(".splide__slide__single").click(function () {
-          var imgSrc = $(this).find("img").attr("src");
-          $(".single-left-main img").attr("src", imgSrc);
-        });
+      $("#close-ovly").on("click", function () {
+        $("#overlay").slideToggle();
       });
     </script>
   </body>

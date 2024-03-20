@@ -53,91 +53,74 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
     <div id="overlay">
       <div id="close-ovly" class="overlay-close">
         <i class="bi bi-x"></i>
-        <script>
-          $("#close-ovly").on("click", function () {
-            $("#overlay").slideToggle();
-            // document.getElementById("body").style.overflow = "auto";
-          });
-        </script>
       </div>
       <div id="pop-up">
         <div class="overlay-menu">
           <a href="/index.html">Anasayfa</a>
-          <a>Hizmetler</a>
           <a href="/projects.html">Projeler</a>
           <a href="/about.html">Hakkımızda</a>
-          <a id="contact-id">İletişim</a>
-
-          <script>
-            $("#contact-id").on("click", function () {
-              function scrollToBottom() {
-                const scrollHeight = document.documentElement.scrollHeight;
-                const windowHeight = window.innerHeight;
-                const speed = 20;
-                let scrollInterval;
-
-                const scrollStep = Math.ceil(
-                  scrollHeight / (scrollHeight / speed)
-                );
-
-                function animateScroll() {
-                  window.scrollBy(0, scrollStep);
-
-                  const reachedBottom =
-                    window.innerHeight + window.pageYOffset >=
-                    document.body.offsetHeight;
-
-                  if (!reachedBottom) {
-                    scrollInterval = setTimeout(animateScroll, 0);
-                  }
-                }
-
-                setTimeout(() => {
-                  clearTimeout(scrollInterval);
-                }, 1000);
-
-                animateScroll();
-              }
-
-              scrollToBottom();
-
-              $("#overlay").slideToggle();
-            });
-          </script>
         </div>
 
-        <a href="#" class="overlay-image">
+        <a href="/index.html" class="overlay-image">
           <img
             src="https://i.ibb.co/sVfbydX/Limya-Logo-Transparent-Background.png"
           />
         </a>
         <div class="overlay-social">
-          <i class="bi bi-instagram"></i>
-          <i class="bi bi-whatsapp"></i>
+          <a href="https://www.instagram.com/limyadesign/?hl=tr"
+            ><i class="bi bi-instagram"></i
+          ></a>
+          <a
+            href="
+                https://api.whatsapp.com/send/?phone=905347495112&text&type=phone_number&app_absent=0"
+            ><i class="bi bi-whatsapp"></i
+          ></a>
         </div>
       </div>
     </div>
 
     <header>
-      <div class="header-row">
+      <div class="header-row header-row-single">
         <div class="container">
           <div class="header-wrapper">
-            <div class="header-left">
-              <i class="bi bi-instagram"></i>
-              <i class="bi bi-whatsapp"></i>
-            </div>
-            <a href="/index.html" class="header-image">
-              <img
-                src="https://i.ibb.co/sVfbydX/Limya-Logo-Transparent-Background.png"
-              />
-            </a>
+            <!--! MOBIL HEADER HAMBURGER-->
+
             <div class="header-right" id="click">
               <span class="ham-menu"></span>
             </div>
+
+            <!--! MOBIL HEADER HAMBURGER-->
+
+            <div class="header-logo">
+              <a href="/index.html" class="header-image">
+                <img
+                  src="https://i.ibb.co/sVfbydX/Limya-Logo-Transparent-Background.png"
+                />
+              </a>
+            </div>
+
+            <div class="header-right-normal">
+              <div class="header-right-normal-links">
+                <a href="/index.html">Anasayfa</a>
+                <a href="/projects.html">Projeler</a>
+                <a href="/about.html">Hakkımızda</a>
+              </div>
+            </div>
+
+            <div class="header-left">
+              <a href="https://www.instagram.com/limyadesign/?hl=tr"
+                ><i class="bi bi-instagram"></i
+              ></a>
+              <a
+                href="
+                https://api.whatsapp.com/send/?phone=905347495112&text&type=phone_number&app_absent=0"
+                ><i class="bi bi-whatsapp"></i
+              ></a>
+            </div>
+
             <script>
               $("#click").on("click", function () {
                 $("#overlay").slideToggle("slow");
-                // document.getElementById("body").style.overflow = "hidden";
               });
             </script>
           </div>
@@ -148,108 +131,70 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
     <!--! header end  -->
 
     <div class="single">
-      <div class="container">
-        <div class="single-wrapper">
-          <div class="single-left">
-            <div class="single-left-main">
-              <img
-                id="myImage"
-                src="https://i.ibb.co/74DPqkG/ERSN2610-Enhanced-NR-1.jpg"
-              />
-            </div>
-            <div class="fullscreen-overlay" id="overlay-fs"></div>
-            <script>
-              var originalImage = document.getElementById("myImage");
-              var overlay = document.getElementById("overlay-fs");
-              var fullscreenImage;
-
-              originalImage.addEventListener("click", function () {
-                if (!fullscreenImage) {
-                  createFullscreenImage();
-                  enterFullscreen();
-                } else {
-                  exitFullscreen();
-                }
-              });
-
-              function createFullscreenImage() {
-                fullscreenImage = originalImage.cloneNode();
-                fullscreenImage.classList.add("fullscreen-img");
-                document.body.appendChild(fullscreenImage);
-                overlay.style.display = "block";
-              }
-
-              function enterFullscreen() {
-                document.body.classList.add("fullscreen");
-              }
-
-              function exitFullscreen() {
-                if (fullscreenImage) {
-                  fullscreenImage.parentNode.removeChild(fullscreenImage);
-                  fullscreenImage = null;
-                  overlay.style.display = "none";
-                  document.body.classList.remove("fullscreen");
-                }
-              }
-
-              overlay.addEventListener("click", function () {
-                exitFullscreen();
-              });
-            </script>
-            <div class="single-left-min">
-              <section class="splide">
-                <div class="splide__track">
-                  <ul class="splide__list">
-                    <li class="splide__slide splide__slide__single">
-                      <img
-                        src="https://i.ibb.co/74DPqkG/ERSN2610-Enhanced-NR-1.jpg"
-                      />
-                    </li>
-                    <li class="splide__slide splide__slide__single">
-                      <img src="https://i.ibb.co/8s1XSrY/ERSN2720-1.jpg" />
-                    </li>
-                    <li class="splide__slide splide__slide__single">
-                      <img
-                        src="https://i.ibb.co/YkvDRkt/ERSN2609-Enhanced-NR-1.jpg"
-                      />
-                    </li>
-
-                    <li class="splide__slide splide__slide__single">
-                      <img src="https://i.ibb.co/CQDyKGg/ERSN2646-1.jpg" />
-                    </li>
-                    <li class="splide__slide splide__slide__single">
-                      <img
-                        src="https://i.ibb.co/Qbmt8N1/ERSN2704-Enhanced-NR-1.jpg"
-                      />
-                    </li>
-
-                    <li class="splide__slide splide__slide__single">
-                      <img src="https://i.ibb.co/VgHS40s/ERSN2741-1.jpg" />
-                    </li>
-                    <li class="splide__slide splide__slide__single">
-                      <img src="https://i.ibb.co/DK7kM2h/ERSN2775-1.jpg" />
-                    </li>
-                  </ul>
-                </div>
-              </section>
+      <div class="single-wrapper">
+        <section class="splide splide-single">
+          <div class="mouse-biome mouse-biome-single">
+            <div class="scroll-downs">
+              <div class="mousey">
+                <div class="scroller"></div>
+              </div>
             </div>
           </div>
-          <div class="single-right">
-            <div class="single-right-title">Silivri Villa</div>
-            <div class="single-project-details-wrapper">
-              <div class="single-project-details">
-                <div class="project-name">Proje İsmi :</div>
-                <div class="project-name-1">Silivri Villa</div>
-              </div>
-              <div class="single-project-details">
-                <div class="project-name">Yıl :</div>
-                <div class="project-name-1">2000</div>
-              </div>
-              <div class="single-project-details">
-                <div class="project-name">Mimar :</div>
-                <div class="project-name-1">Saygın Gül</div>
-              </div>
-            </div>
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide splide__slide2">
+                <img
+                  src="https://i.ibb.co/74DPqkG/ERSN2610-Enhanced-NR-1.jpg"
+                />
+              </li>
+              <li class="splide__slide splide__slide2">
+                <img src="https://i.ibb.co/8s1XSrY/ERSN2720-1.jpg" />
+              </li>
+              <li class="splide__slide splide__slide2">
+                <img
+                  src="https://i.ibb.co/YkvDRkt/ERSN2609-Enhanced-NR-1.jpg"
+                />
+              </li>
+
+              <li class="splide__slide splide__slide2">
+                <img src="https://i.ibb.co/CQDyKGg/ERSN2646-1.jpg" />
+              </li>
+              <li class="splide__slide splide__slide2">
+                <img
+                  src="https://i.ibb.co/Qbmt8N1/ERSN2704-Enhanced-NR-1.jpg"
+                />
+              </li>
+
+              <li class="splide__slide splide__slide2">
+                <img src="https://i.ibb.co/VgHS40s/ERSN2741-1.jpg" />
+              </li>
+              <li class="splide__slide splide__slide2">
+                <img src="https://i.ibb.co/DK7kM2h/ERSN2775-1.jpg" />
+              </li>
+            </ul>
+          </div>
+          <script>
+            $(".mousey").on("click", function () {
+              $("html, body").animate(
+                {
+                  scrollTop: $(".splide__slide2").offset().top,
+                },
+                1500
+              );
+            });
+          </script>
+        </section>
+      </div>
+      <div class="single-bottom">
+        <div class="single-bottom-title">Silivri Villa</div>
+        <div class="single-project-details-wrapper">
+          <div class="single-project-details">
+            <div class="project-name">Proje İsmi :</div>
+            <div class="project-name-1">Silivri Villa</div>
+          </div>
+          <div class="single-project-details">
+            <div class="project-name">Yıl :</div>
+            <div class="project-name-1">2000</div>
           </div>
         </div>
       </div>
@@ -269,9 +214,8 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
             <div class="footer-left">
               <p class="footer-title">Linkler</p>
               <div class="footer-left-p">
-                <a href="index.html">Anasayfa</a>
-                <a href="about.html">Hakkımızda</a>
-                <a id="button-s">Saygın Gül</a>
+                <a href="/index.html">Anasayfa</a>
+                <a href="/about.html">Hakkımızda</a>
 
                 <script>
                   $("#button-s").on("click", function () {
@@ -284,7 +228,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                   });
                 </script>
 
-                <a href="projects.html">Projeler</a>
+                <a href="/projects.html">Projeler</a>
               </div>
             </div>
           </div>
@@ -318,13 +262,10 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
 
     <!--! portfolio end  -->
 
-    <script src="slider-single.js"></script>
+    <script src="/slider-single.js"></script>
     <script>
-      $(document).ready(function () {
-        $(".splide__slide__single").click(function () {
-          var imgSrc = $(this).find("img").attr("src");
-          $(".single-left-main img").attr("src", imgSrc);
-        });
+      $("#close-ovly").on("click", function () {
+        $("#overlay").slideToggle();
       });
     </script>
   </body>

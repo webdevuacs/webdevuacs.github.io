@@ -239,6 +239,7 @@ header {
   align-items: center;
   justify-content: center;
   object-fit: cover;
+
 }
 
 .header-right-normal-links{
@@ -273,6 +274,9 @@ header {
     font-size: 15px;
 }
 
+video {
+  pointer-events: none;
+}
 
 
 .video-container{
@@ -631,15 +635,17 @@ header {
   position: relative;
   max-height: 280px;
   object-fit: cover;
+  
 }
 
 
 .portfolio-desc-wrapper{
   position: absolute;
   transition: 0.3s ease;
-  top: 40%;
-  left: 40%;
+  top: 50%;
+  left: 50%;
   pointer-events: none;
+  transform: translate(-50%, -50%);
 }
 
 .port-cont-desc{
