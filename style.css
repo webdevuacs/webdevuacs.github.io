@@ -182,10 +182,10 @@ header {
     display: flex;
     width: 100%;
     z-index: 1001;
-    margin-top: 120px;
     justify-content: center;
     color: white;
     flex-direction: column;
+    height: 100%;
   }
 
   .overlay-close i{
@@ -202,6 +202,7 @@ header {
     flex-direction: column;
     gap: 50px;
     align-items: center;
+    margin-bottom: 100px;
   }
 
   .overlay-menu a{
@@ -613,6 +614,7 @@ video {
   will-change: transform;
   backface-visibility: hidden;
   transition: ease 0.3s;
+
 }
 
 .portfolio-content:hover img{
